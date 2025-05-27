@@ -1,0 +1,328 @@
+body {
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+    font-weight: 300;
+    color: palegoldenrod;
+    margin: 0;
+    padding: 0;
+    background-color: #242424;
+    text-align: center;
+    padding-top: 80px;    /* Space for fixed header */
+    padding-bottom: 90px; /* Space for fixed footer */
+    min-height: 100vh;
+}
+
+/* Consolidated styles for lists */
+ul, ol {
+    list-style: none; /* Remove default bullet points or numbers */
+    padding: 0;
+    margin: 0;
+}
+
+/* General text alignment */
+body, .playlist-container, footer {
+    text-align: center; /* Center-align text globally */
+}
+
+/* Header and Footer Styles */
+header, footer {
+    height: 80px; /* Consistent height for header and footer */
+    line-height: 70px; /* Vertically center text */
+    text-align: center; /* Center-align text */
+    background: #000000; /* Background color */
+    color: chartreuse; /* Text color */
+}
+
+header {
+    position: fixed;
+    top: 0;
+    padding: 10px 0;
+    width: 100%;
+    background: url('/Users/William/Downloads/stars5.gif') repeat;
+    background-size: auto;
+    z-index: 1000; /* Ensure the header is above other content */
+    height: 60px;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background: url('/Users/William/Downloads/stars5.gif') repeat;
+    background-size: auto;
+    color: chartreuse;
+    height: 60px;
+}
+
+h1 {
+    margin: 0;
+}
+
+nav {
+    margin: 20px 0;
+}
+
+nav a {
+    color: #36a8e1;
+    text-decoration: none;
+    margin: 0 15px;
+}
+
+nav a:hover {
+    color: #ff4500;
+    text-decoration: underline;
+}
+
+.custom-link {
+    color: palegoldenrod;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    position: relative;
+    padding: 5px;
+}
+
+.custom-link:hover {
+    color: #3426ff;
+    text-decoration: underline;
+}
+
+.custom-link:active {
+    color: #a80404;
+    transform: scale(0.98);
+}
+
+.custom-link:visited {
+    color: #4c94cf;
+}
+
+main {
+    padding: 80px 20px 20px; /* Add top padding to account for the header */
+    animation: fadeIn 0.5s ease-in;
+}
+
+/* Footer styles */
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70px;
+    padding: 10px 0;
+}
+
+.footer-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    gap: 180px; /* space between links */
+}
+
+.footer-nav a {
+    color: #06ff1e;
+    text-decoration: none;
+    font-size: 1.3em;
+    transition: color 0.2s;
+}
+
+.footer-nav a:hover {
+    color: chartreuse;
+    text-decoration: underline;
+}
+
+.playlist-container {
+    max-width: 600px; /* Set a maximum width for the playlist box */
+    margin: 20px auto; /* Center the box horizontally */
+    padding: 20px; /* Add padding inside the box */
+    background-color: #333; /* Set a dark background color */
+    border: 2px solid chartreuse; /* Add a border to the box */
+    border-radius: 10px; /* Round the corners of the box */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Add a subtle shadow for depth */
+    text-align: center; /* Center-align text and controls */
+    max-height: 500px; /* Set a fixed height for the container */
+    overflow: hidden; /* Hide overflow for nested scrolling */
+    animation: moonGlow 4s ease-in-out infinite;
+    position: relative;
+}
+
+#track-info {
+    margin-bottom: 10px; /* Add spacing below the "Now Playing" text */
+    color: palegoldenrod; /* Match the text color with the theme */
+}
+
+#playlist-controls {
+    margin-bottom: 10px; /* Add spacing below the buttons */
+}
+
+#playlist-controls button {
+    padding: 5px 10px;
+    background-color: #444;
+    color: palegoldenrod;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 0 5px; /* Add spacing between buttons */
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+#playlist-controls button::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background: rgba(6, 255, 30, 0.2);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: width 0.6s ease, height 0.6s ease;
+}
+
+#playlist-controls button:hover::before {
+    width: 300px;
+    height: 300px;
+}
+
+#playlist-controls button:active {
+    transform: scale(0.95);
+}
+
+#audio {
+    width: 100%; /* Make the audio player take the full width of the container */
+    margin: 10px 0; /* Add spacing above and below the audio player */
+}
+
+audio {
+    filter: invert(0); /* Inverts the colors of the audio element */
+}
+
+#playlist {
+    list-style: none; /* Remove default bullet points or arrows */
+    padding: 0;
+    margin: 0;
+    max-height: 300px; /* Set height for the playlist area */
+    overflow-y: auto; /* Enable vertical scrolling */
+}
+
+/* Global scrollbar styles */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #333;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: chartreuse;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #06ff1e;
+}
+
+/* Firefox scrollbar styles */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: chartreuse #333;
+}
+
+/* Playlist item styles */
+#playlist li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 0;
+    padding: 10px;
+    background-color: #444;
+    border-radius: 5px;
+}
+
+#playlist li:hover {
+    background-color: #555;
+}
+
+.success-message {
+    color: chartreuse;
+    transform: scale(1);
+    animation: successPop 0.3s ease;
+}
+
+@keyframes successPop {
+    0% { transform: scale(0.8); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes moonGlow {
+    0% {
+        box-shadow: 0 0 10px chartreuse,
+                   0 0 20px chartreuse,
+                   0 0 30px chartreuse;
+    }
+    50% {
+        box-shadow: 0 0 15px chartreuse,
+                   0 0 25px chartreuse,
+                   0 0 35px chartreuse;
+    }
+    100% {
+        box-shadow: 0 0 10px chartreuse,
+                   0 0 20px chartreuse,
+                   0 0 30px chartreuse;
+    }
+}
+
+.personal-content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.personal-content article {
+    margin-bottom: 40px;
+    padding: 20px;
+    background: rgba(51, 51, 51, 0.5);
+    border: 1px solid chartreuse;
+    border-radius: 5px;
+}
+
+.entry time {
+    color: #06ff1e;
+    font-family: monospace;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.ascii-art {
+    font-family: monospace;
+    color: chartreuse;
+    margin: 20px 0;
+    white-space: pre;
+}
+
+.image-with-context {
+    margin: 20px 0;
+}
+
+.image-with-context img {
+    max-width: 100%;
+    border: 1px solid chartreuse;
+    border-radius: 5px;
+}
+
+.fade-in {
+    opacity: 0;
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    will-change: opacity, transform;
+}
+
+.fade-in.visible {
+    opacity: 1;
+}
