@@ -6,41 +6,20 @@ body {
     padding: 0;
     background-color: #242424;
     text-align: center;
-    padding-top: 80px;    /* Space for fixed header */
-    padding-bottom: 90px; /* Space for fixed footer */
-    min-height: 100vh;
-}
-
-/* Consolidated styles for lists */
-ul, ol {
-    list-style: none; /* Remove default bullet points or numbers */
-    padding: 0;
-    margin: 0;
-}
-
-/* General text alignment */
-body, .playlist-container, footer {
-    text-align: center; /* Center-align text globally */
-}
-
-/* Header and Footer Styles */
-header, footer {
-    height: 80px; /* Consistent height for header and footer */
-    line-height: 70px; /* Vertically center text */
-    text-align: center; /* Center-align text */
-    background: #000000; /* Background color */
-    color: chartreuse; /* Text color */
+    padding-top: 60px;
 }
 
 header {
+    background: #000000;
+    color: chartreuse;
+    padding: 10px 0;
     position: fixed;
     top: 0;
-    padding: 10px 0;
     width: 100%;
-    background: url('/Users/William/Downloads/stars5.gif') repeat;
+    background: url('images/stars5.gif') repeat;
     background-size: auto;
-    z-index: 1000; /* Ensure the header is above other content */
-    height: 60px;
+    text-align: center;
+    z-index: 1000;
 }
 
 footer {
@@ -293,7 +272,7 @@ audio {
     border-radius: 5px;
 }
 
-.entry time {
+entry time {
     color: #06ff1e;
     font-family: monospace;
     display: block;
