@@ -37,7 +37,7 @@ header {
     top: 0;
     padding: 10px 0;
     width: 100%;
-    background: url('/Users/William/Downloads/stars5.gif') repeat;
+    background: url('images/stars5.gif') repeat;
     background-size: auto;
     z-index: 1000; /* Ensure the header is above other content */
     height: 60px;
@@ -47,7 +47,7 @@ footer {
     position: fixed;
     bottom: 0;
     width: 100%;
-    background: url('/Users/William/Downloads/stars5.gif') repeat;
+    background: url('images/stars5.gif') repeat;
     background-size: auto;
     color: chartreuse;
     height: 60px;
