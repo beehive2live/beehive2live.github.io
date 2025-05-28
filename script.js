@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', function() {
     const audio = document.getElementById('audio');
     const playlist = document.getElementById('playlist');
     const currentTrack = document.getElementById('current-track');
