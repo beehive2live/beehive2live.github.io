@@ -40,5 +40,25 @@
             <a href="second-page.html" class="custom-link">Links</a>
         </nav>
     </footer>
+
+
+<script>
+function generateFibonacci(n) {
+    let fib = [0, 1];
+    for (let i = 2; i < n; i++) {
+        fib.push(fib[i - 1] + fib[i - 2]);
+    }
+    return fib.slice(0, n);
+}
+
+function showFibonacci() {
+    const count = parseInt(document.getElementById('fibCount').value, 10);
+    const sequence = generateFibonacci(count);ŵq
+    document.getElementById('fibonacciOutput').innerText = sequence.join(', ');
+}
+</script>
+
+
+
 </body>
 </html>
