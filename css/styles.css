@@ -117,15 +117,19 @@ footer {
 }
 
 .footer-nav a {
-    color: chartreuse;
-    text-decoration: none;
     font-size: 1.3em;
     transition: color 0.2s;
+    color: chartreuse;  /* Add this line */
+    text-decoration: none;  /* Add this to remove default underline */
 }
 
 .footer-nav a:hover {
     color: chartreuse;
     text-decoration: underline;
+}
+
+.footer-nav a:visited {
+    color: chartreuse;  /* Add this to maintain color for visited links */
 }
 
 .playlist-container {
